@@ -1,3 +1,11 @@
+/**
+ * 写出最优雅的JavaScript代码 https://github.com/airbnb/javascript
+ * 推荐下载VScode插件：Better Comments，更加舒心的注释阅读
+ * // [0] 不对规则进行检验
+ * [1] warn 提示💡
+ * [2] error 警告⚠️
+ */
+
 module.exports = {
   // parser: "babel-eslint",
   extends: "airbnb",
@@ -25,7 +33,6 @@ module.exports = {
     "react/jsx-no-bind": [0],
     "react/prop-types": [0],
     "react/prefer-stateless-function": [0],
-    "no-else-return": [0],
     "no-restricted-syntax": [0],
     "import/no-extraneous-dependencies": [0],
     "no-use-before-define": [0],
@@ -35,47 +42,92 @@ module.exports = {
     "import/extensions": [0],
     "no-bitwise": [0],
     "no-cond-assign": [0],
-    "import/no-unresolved": [0],
     "require-yield": [1],
     "no-param-reassign": [0],
     "no-shadow": [0],
     "no-underscore-dangle": [0],
 
-    // 使用空格开始所有注释，以便于阅读
-    // https://github.com/airbnb/javascript#comments--spaces
-    // "spaced-comment": [0],
+    /**
+     * 如果if块总是执行return语句，则后续的else块是不必要的
+      // bad
+      function foo() {
+        if (x) {
+          return x;
+        } else {
+          return y;
+        }
+      }
+      // ? good
+      function foo() {
+        if (x) {
+          return x;
+        }
 
-    // 使用2个空格来缩进
-    // https://github.com/airbnb/javascript#whitespace--spaces
+        return y;
+      }
+     * https://github.com/airbnb/javascript#blocks--no-else-return
+     */
+    // // "no-else-return": [0],
+
+    /**
+     * 不能导入不存在的模块
+     * bad: import React from 'reactt';
+     * ? good: import React from 'react';
+     */
+    // // "import/no-unresolved": [0],
+
+    /**
+     * 使用空格缩进所有注释，以便于阅读
+     * https://github.com/airbnb/javascript#comments--spaces
+     */
+    // // "spaced-comment": [0],
+
+    /**
+     * 使用2个空格来缩进
+     * https://github.com/airbnb/javascript#whitespace--spaces
+     */
     // "indent": [0],
 
     /** 
      * js表达式中要求使用单引号：Use single quotes '' for strings. eslint
      * bad: const name = "Capt. Janeway"; const name = `Capt. Janeway`;
-     * good: const name = 'Capt. Janeway';
+     * ? good: const name = 'Capt. Janeway';
      * https://github.com/airbnb/javascript#strings--quotes
      */
-    // "quotes": [0],
+    // // "quotes": [0],
 
-    "func-names": [0],
+    /** 
+     * 规范函数的写法，确保一致性
+     * bad: function a () {}; 
+     *      function(){};
+     *      
+     * ? good: function a() {};
+     * ?       function () {};
+     * https://github.com/airbnb/javascript#functions--signature-spacing
+     */
+    // // "space-before-function-paren": [0],
 
     /**
      * 1 如果函数体由返回没有副作用的表达式的单个语句组成，则省略大括号并使用隐式返回。否则，请保留大括号并使用return语句。
-     * 2 箭头函数是只有一个参数的时候是否使用（）
+     * 2 箭头函数是只有一个参数的时候是否使用（params）的写法
      * bad: [1, 2, 3].map((number) => `A string containing the ${number}.`);
-     * good: [1, 2, 3].map(number => `A string containing the ${number}.`);
+     * ? good: [1, 2, 3].map(number => `A string containing the ${number}.`);
      * https://github.com/airbnb/javascript#arrows--implicit-return
      */
-    // "arrow-parens": [0],
-    "space-before-function-paren": [0],
+    // // "arrow-parens": [0],
+
+    "func-names": [0],
     "no-useless-escape": [0],
     "object-curly-newline": [0],
     "function-paren-newline": [0],
     "class-methods-use-this": [0],
     "no-new": [0],
-    "import/newline-after-import": [0],
+
+    // 表示import语句与其他代码之间需要存在一个空行
+    // // "import/newline-after-import": [0],
+    
     // 禁止代码中出现console
-    // "no-console": [0]
+    // // "no-console": [0]
   },
   parserOptions: {
     ecmaFeatures: {
