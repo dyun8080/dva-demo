@@ -2,10 +2,11 @@ export default {
   // babel 配置文件
   extraBabelPlugins: [
     [
-      // antd组件按需加载，style为true加载less文件
+      // antd组件按需加载
       "import", {
         libraryName: "antd",
         libraryDirectory: "es",
+        // "css" or true，style：true时候加载less文件
         style: true
       }
     ]
