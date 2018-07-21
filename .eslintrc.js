@@ -73,6 +73,22 @@ module.exports = {
      */
     // // "react/react-in-jsx-scope": [0],
 
+    /** 
+     * 组件的props中的属性使用之前要先进行解构
+     // bad
+     * const MyComponent = (props) => {
+     *   return (<div id={props.id} />)
+     * };
+     * 
+     // ? good
+     * const MyComponent = (props) => {
+     *   const { id } = props;
+     *   return (<div id={id} />)
+     * };
+     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+     */
+    // // "react/destructuring-assignment": [0],
+
     /**
      * 不能导入不存在的模块，类似于ts的检查机制
      * bad: import React from 'reactt';
