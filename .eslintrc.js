@@ -106,7 +106,7 @@ module.exports = {
      * 使用2个空格来缩进
      * https://github.com/airbnb/javascript#whitespace--spaces
      */
-    // "indent": [0],
+    // // "indent": [0],
 
     /** 
      * js表达式中要求使用单引号：Use single quotes '' for strings. eslint
