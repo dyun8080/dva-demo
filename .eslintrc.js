@@ -24,7 +24,6 @@ module.exports = {
     }],
     "generator-star-spacing": [0],
     "consistent-return": [0],
-    "react/react-in-jsx-scope": [0],
     "react/forbid-prop-types": [0],
     "react/jsx-one-expression-per-line": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".js", "jsx"] }],
@@ -70,7 +69,12 @@ module.exports = {
     // // "no-else-return": [0],
 
     /**
-     * 不能导入不存在的模块
+     * 不能在没有import React from 'react'; 的模块中写jsx表达式
+     */
+    // // "react/react-in-jsx-scope": [0],
+
+    /**
+     * 不能导入不存在的模块，类似于ts的检查机制
      * bad: import React from 'reactt';
      * ? good: import React from 'react';
      */
@@ -90,6 +94,7 @@ module.exports = {
 
     /** 
      * js表达式中要求使用单引号：Use single quotes '' for strings. eslint
+     * 也不能出现没有变量的模板字符``
      * bad: const name = "Capt. Janeway"; const name = `Capt. Janeway`;
      * ? good: const name = 'Capt. Janeway';
      * https://github.com/airbnb/javascript#strings--quotes
