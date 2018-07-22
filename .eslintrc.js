@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-  // parser: "babel-eslint",
+  parser: "babel-eslint",
   extends: "airbnb",
   env: {
     // 指定浏览器环境，允许window对象
