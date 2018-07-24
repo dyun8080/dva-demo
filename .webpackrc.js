@@ -11,6 +11,7 @@
  * 
  * 生产环境 production
  * ? ✔️ 静态文件hash处理
+ * ? ✔️ 忽略 moment 的 locale 文件，减少尺寸。
 */
 
 export default {
@@ -43,6 +44,7 @@ export default {
     },
     production: {
       hash: true,
+      ignoreMomentLocale: true,
     }
   },
 }
