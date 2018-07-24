@@ -12,7 +12,7 @@ module.exports = {
   env: {
     // 指定浏览器环境，允许window对象
     browser: true,
-    // jest环境，node环境的拓展：it...
+    // jest环境，基于node环境的拓展：node API + jest API
     jest: true
   },
   rules: {
