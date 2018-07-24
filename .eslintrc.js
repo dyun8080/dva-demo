@@ -69,6 +69,13 @@ module.exports = {
     // // "no-else-return": [0],
 
     /**
+     * 🚫禁止在一个文件中出现多个存在生命周期的组件，
+     * 如果希望为每个文件声明多个组件，则可以禁用此规则。
+     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#when-not-to-use-it
+     */
+    // // "react/no-multi-comp": [0],
+
+    /**
      * 不能在没有import React from 'react'; 的模块中写jsx表达式
      */
     // // "react/react-in-jsx-scope": [0],
