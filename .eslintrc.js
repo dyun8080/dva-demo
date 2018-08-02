@@ -1,5 +1,6 @@
 /**
- * 写出最优雅的JavaScript代码 https://github.com/airbnb/javascript
+ * 写出最优雅的JavaScript代码
+ * @see https://github.com/airbnb/javascript
  * 推荐下载VScode插件：Better Comments，更加舒心的注释阅读
  * // [0] 不对规则进行检验
  * [1] warn 提示💡
@@ -64,14 +65,14 @@ module.exports = {
 
         return y;
       }
-     * https://github.com/airbnb/javascript#blocks--no-else-return
+     * @see https://github.com/airbnb/javascript#blocks--no-else-return
      */
     // // "no-else-return": [0],
 
     /**
      * 🚫禁止在一个文件中出现多个存在生命周期的组件，
      * 如果希望为每个文件声明多个组件，则可以禁用此规则。
-     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#when-not-to-use-it
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#when-not-to-use-it
      */
     // // "react/no-multi-comp": [0],
 
@@ -80,19 +81,19 @@ module.exports = {
      */
     // // "react/react-in-jsx-scope": [0],
 
-    /** 
+    /**
      * 组件的props中的属性使用之前要先进行解构
      // bad
      * const MyComponent = (props) => {
      *   return (<div id={props.id} />)
      * };
-     * 
+     *
      // ? good
      * const MyComponent = (props) => {
      *   const { id } = props;
      *   return (<div id={id} />)
      * };
-     * https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
+     * @see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
      */
     // // "react/destructuring-assignment": [0],
 
@@ -105,33 +106,33 @@ module.exports = {
 
     /**
      * 使用空格缩进所有注释，以便于阅读
-     * https://github.com/airbnb/javascript#comments--spaces
+     * @see https://github.com/airbnb/javascript#comments--spaces
      */
     // // "spaced-comment": [0],
 
     /**
      * 使用2个空格来缩进
-     * https://github.com/airbnb/javascript#whitespace--spaces
+     * @see https://github.com/airbnb/javascript#whitespace--spaces
      */
     // // "indent": [0],
 
-    /** 
+    /**
      * js表达式中要求使用单引号：Use single quotes '' for strings. eslint
      * 也不能出现没有变量的模板字符``
      * bad: const name = "Capt. Janeway"; const name = `Capt. Janeway`;
      * ? good: const name = 'Capt. Janeway';
-     * https://github.com/airbnb/javascript#strings--quotes
+     * @see https://github.com/airbnb/javascript#strings--quotes
      */
     // // "quotes": [0],
 
-    /** 
+    /**
      * 规范函数的写法，确保一致性
-     * bad: function a () {}; 
+     * bad: function a () {};
      *      function(){};
-     *      
+     *
      * ? good: function a() {};
      * ?       function () {};
-     * https://github.com/airbnb/javascript#functions--signature-spacing
+     * @see https://github.com/airbnb/javascript#functions--signature-spacing
      */
     // // "space-before-function-paren": [0],
 
@@ -140,7 +141,7 @@ module.exports = {
      * 2 箭头函数是只有一个参数的时候是否使用（params）的写法
      * bad: [1, 2, 3].map((number) => `A string containing the ${number}.`);
      * ? good: [1, 2, 3].map(number => `A string containing the ${number}.`);
-     * https://github.com/airbnb/javascript#arrows--implicit-return
+     * @see https://github.com/airbnb/javascript#arrows--implicit-return
      */
     // // "arrow-parens": [0],
 
@@ -153,7 +154,7 @@ module.exports = {
 
     // 表示import语句与其他代码之间需要存在一个空行
     // // "import/newline-after-import": [0],
-    
+
     // 禁止代码中出现console
     // // "no-console": [0]
   },
