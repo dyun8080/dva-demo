@@ -36,3 +36,7 @@ $ npm run analyze
 使用 eslint-config-airbnb 代替 eslint-config-umi
 
 写出最优雅和更加规范的的JavaScript代码 [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+
+## 其他
+
+后续会尝试着去使用umi
